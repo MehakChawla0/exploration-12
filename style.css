@@ -1,0 +1,53 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: 100vh;
+  background: linear-gradient(to bottom right, #f8e1f4, #e3f0ff);
+  font-family: 'Segoe UI', sans-serif;
+  overflow: hidden;
+  position: relative;
+}
+
+.content {
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  padding-top: 20%;
+}
+
+h1 {
+  font-size: 48px;
+  color: #c66ddc;
+  margin-bottom: 10px;
+}
+
+p {
+  font-size: 20px;
+  color: #6b5b95;
+}
+
+.sparkle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: radial-gradient(circle, #fff 0%, #c66ddc 60%, transparent 100%);
+  border-radius: 50%;
+  pointer-events: none;
+  animation: sparkleAnim 0.8s ease-out forwards;
+  z-index: 0;
+}
+
+@keyframes sparkleAnim {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: scale(2.5);
+    opacity: 0;
+  }
+}

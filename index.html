@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>✨ Sparkle Trail Landing Page</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="content">
+    <h1>✨ Sparkle Trail</h1>
+    <p>Move your mouse and let the magic follow...</p>
+  </div>
+
+  <script>
+    document.addEventListener("mousemove", function(e) {
+      const sparkle = document.createElement("div");
+      sparkle.classList.add("sparkle");
+      sparkle.style.left = `${e.pageX}px`;
+      sparkle.style.top = `${e.pageY}px`;
+      document.body.appendChild(sparkle);
+
+      setTimeout(() => {
+        sparkle.remove();
+      }, 800);
+    });
+  </script>
+</body>
+</html>
